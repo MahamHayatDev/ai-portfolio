@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #0F1420;
+  --bg-panel: #10151F;
+  --ink: #E8E6DE;
+  --ink-dim: #9CA3AF;
+  --gold: #C9A227;
+  --rule: #2A3142;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
