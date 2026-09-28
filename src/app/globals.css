@@ -1,16 +1,91 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #0F1420;
-  --bg-panel: #10151F;
-  --ink: #E8E6DE;
-  --ink-dim: #9CA3AF;
-  --gold: #C9A227;
-  --rule: #2A3142;
+  --background: #fff9f8;
+  --foreground: #252326;
+  --blush: #fceff2;
+  --rose: #d98f9b;
+  --rose-light: #ebc1c8;
+  --muted: #706a6d;
+  --border: #e9dde0;
+  --card: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--bg);
-  color: var(--ink);
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: #ebc1c8;
+  color: #252326;
+}
+
+/* Soft scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff9f8;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e4c9ce;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d98f9b;
+}
+
+/* Subtle reusable animations */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes softPulse {
+  0%,
+  100% {
+    opacity: 0.45;
+  }
+
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.animate-soft-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-soft-pulse {
+  animation: softPulse 4s ease-in-out infinite;
 }

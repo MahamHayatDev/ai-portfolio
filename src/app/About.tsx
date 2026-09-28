@@ -2,120 +2,118 @@ export default function About() {
   return (
     <section
       id="about"
-      className="relative z-10 px-10 md:px-16 py-24 w-full overflow-hidden"
+      className="relative overflow-hidden px-6 py-24 md:px-10 md:py-28 lg:px-16"
     >
-      <div className="mb-12">
-        <p className="text-base tracking-widest text-[#2dd4bf] mb-3">
-          PROFILE
-        </p>
+      <div className="pointer-events-none absolute right-0 top-20 h-72 w-72 rounded-full bg-[#FCEFF2] blur-3xl" />
 
-        <h2 className="text-6xl font-serif mb-4">
-          About
-        </h2>
-
-        <p className="text-xl text-[#9CA3AF] max-w-2xl">
-          AI automation and Generative AI development focused on building
-          practical, end-to-end intelligent systems.
-        </p>
-      </div>
-
-      <div className="grid grid-cols-1 lg:grid-cols-[1fr_480px] gap-12 items-start">
-        <div className="rounded-2xl border border-[#2A3142] bg-[#10151F]/70 backdrop-blur p-8 md:p-10 text-xl text-[#c9cdd6] leading-relaxed space-y-7">
-          
-          <p>
-            I’m an AI and automation developer focused on building practical
-            Generative AI applications, intelligent agents, and end-to-end
-            automation systems.
+      <div className="relative mx-auto max-w-7xl">
+        {/* Heading */}
+        <div className="mb-12 max-w-3xl">
+          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.28em] text-[#B46F7B]">
+            Profile
           </p>
 
-          <p>
-            My work combines{" "}
-            <span className="text-[#E8E6DE]">
-              RAG, AI agents, LangChain, LangGraph, n8n, APIs, and LLM
-              integrations
-            </span>{" "}
-            to turn ideas into working applications. I also work across the
-            backend and frontend, using technologies such as Python, FastAPI,
-            Next.js, React, TypeScript, Supabase, and REST APIs.
+          <h2 className="font-serif text-4xl tracking-tight text-[#252326] md:text-5xl">
+            I build AI systems that do more than generate text.
+          </h2>
+
+          <p className="mt-5 text-base leading-8 text-[#706A6D] md:text-lg">
+            My focus is practical Generative AI, intelligent automation, and
+            end-to-end application development.
           </p>
+        </div>
 
-          <p className="text-[#9CA3AF]">
-            I enjoy building systems that go beyond simple AI demonstrations:
-            designing the workflow, connecting services, implementing the
-            reasoning layer, automating processes, and presenting the results
-            through usable interfaces.
-          </p>
+        <div className="grid items-start gap-10 lg:grid-cols-[1fr_380px]">
+          {/* Main content */}
+          <div className="rounded-3xl border border-[#E9DDE0] bg-white p-7 shadow-[0_18px_60px_rgba(82,54,60,0.06)] md:p-10">
+            <div className="space-y-6 text-base leading-8 text-[#5F585B] md:text-lg">
+              <p>
+                I&apos;m an AI and automation developer focused on building
+                practical Generative AI applications, intelligent agents, and
+                end-to-end automation systems.
+              </p>
 
-          <div className="h-px w-full bg-[#2A3142]" />
+              <p>
+                My work combines{" "}
+                <strong className="font-medium text-[#3B3538]">
+                  RAG, AI agents, LangChain, LangGraph, n8n, APIs, and LLM
+                  integrations
+                </strong>{" "}
+                to turn ideas into working applications. I also work across
+                backend and frontend systems using Python, FastAPI, Next.js,
+                React, TypeScript, Supabase, and REST APIs.
+              </p>
 
-          <p className="text-[#b9d4e4]">
-            I care about building AI systems that are reliable, explainable,
-            and useful in real-world workflows — not just models that produce
-            impressive outputs.
-          </p>
+              <p>
+                I enjoy building systems that go beyond simple AI
+                demonstrations: designing the workflow, connecting services,
+                implementing the reasoning layer, automating processes, and
+                presenting the results through usable interfaces.
+              </p>
+            </div>
 
-          <div className="flex flex-wrap gap-3 pt-2">
-            {[
-              "Generative AI",
-              "RAG",
-              "AI Agents",
-              "LangChain",
-              "LangGraph",
-              "n8n",
-              "Python",
-              "FastAPI",
-              "APIs",
-              "Next.js",
-              "React",
-              "TypeScript",
-              "Supabase",
-              "Vector Databases",
-              "Groq",
-            ].map((skill) => (
-              <span
-                key={skill}
-                className="px-4 py-2 rounded-full border border-[#2A3142] bg-[#0c111b] text-sm text-[#9CA3AF] hover:text-[#E8E6DE] hover:border-[#2dd4bf]/50 transition"
-              >
-                {skill}
-              </span>
-            ))}
+            <div className="my-8 h-px bg-[#E9DDE0]" />
+
+            <div className="rounded-2xl bg-[#FCEFF2] p-5 md:p-6">
+              <p className="text-sm leading-7 text-[#51494C] md:text-base">
+                <span className="font-semibold text-[#3B3538]">
+                  My approach:
+                </span>{" "}
+                build AI systems that are reliable, explainable, and useful in
+                real-world workflows — not just models that produce impressive
+                outputs.
+              </p>
+            </div>
+          </div>
+
+          {/* Profile card */}
+          <div className="overflow-hidden rounded-3xl border border-[#E9DDE0] bg-white p-3 shadow-[0_18px_60px_rgba(82,54,60,0.07)]">
+            <img
+              src="/photo.jpg"
+              alt="Maham Shaukat"
+              className="h-[440px] w-full rounded-[1.35rem] object-cover"
+            />
+
+            <div className="p-5">
+              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#B46F7B]">
+                Current focus
+              </p>
+
+              <p className="mt-3 text-sm leading-6 text-[#5F585B]">
+                AI automation · Generative AI · Agentic workflows · Backend
+                systems
+              </p>
+            </div>
           </div>
         </div>
 
-        <div>
-          <img
-            src="/photo.jpg"
-            alt="Maham Hayat"
-            className="w-full h-[600px] object-cover rounded-2xl border border-[#2A3142] shadow-2xl"
-          />
+        {/* Links */}
+        <div className="mt-8 flex flex-wrap gap-3">
+          <a
+            href="mailto:mahamhayat192@gmail.com"
+            className="rounded-full border border-[#E9DDE0] bg-white px-5 py-2.5 text-sm font-medium text-[#4F494C] transition hover:border-[#D98F9B] hover:bg-[#FCEFF2]"
+          >
+            Email
+          </a>
+
+          <a
+            href="https://github.com/MahamHayatDev"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-full border border-[#E9DDE0] bg-white px-5 py-2.5 text-sm font-medium text-[#4F494C] transition hover:border-[#D98F9B] hover:bg-[#FCEFF2]"
+          >
+            GitHub
+          </a>
+
+          <a
+            href="https://github.com/MahamHayatDev/fintech-ops-assistant"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-full border border-[#E9DDE0] bg-white px-5 py-2.5 text-sm font-medium text-[#4F494C] transition hover:border-[#D98F9B] hover:bg-[#FCEFF2]"
+          >
+            Latest Project
+          </a>
         </div>
-      </div>
-
-      <div className="flex flex-wrap gap-8 justify-center mt-12 text-base text-[#9CA3AF]">
-        <a
-          href="mailto:mahamhayat192@gmail.com"
-          className="hover:text-[#E8E6DE] transition"
-        >
-          Email
-        </a>
-
-        <a
-          href="https://github.com/MahamHayatDev"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:text-[#E8E6DE] transition"
-        >
-          GitHub
-        </a>
-
-        <a
-          href="https://github.com/MahamHayatDev/fintech-ops-assistant"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:text-[#E8E6DE] transition"
-        >
-          Latest Project
-        </a>
       </div>
     </section>
   );

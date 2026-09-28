@@ -1,383 +1,139 @@
-
-"use client";
-
-import Image from "next/image";
-
 export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen overflow-hidden border-b border-white/5"
+      className="relative flex min-h-[88vh] items-center overflow-hidden bg-[#FFF4F5] px-6 py-24 md:px-10 lg:px-16"
     >
-      {/* Background */}
-      <div className="pointer-events-none absolute inset-0">
-        <div className="absolute left-[5%] top-[5%] h-[400px] w-[400px] rounded-full bg-blue-500/10 blur-[140px]" />
-        <div className="absolute right-[5%] top-[15%] h-[500px] w-[500px] rounded-full bg-purple-500/10 blur-[160px]" />
-        <div className="absolute bottom-0 left-[35%] h-[350px] w-[350px] rounded-full bg-cyan-400/5 blur-[130px]" />
+      <div className="pointer-events-none absolute -right-32 top-10 h-96 w-96 rounded-full bg-[#F5D5DC] opacity-70 blur-3xl" />
 
-        <div
-          className="absolute inset-0 opacity-[0.035]"
-          style={{
-            backgroundImage:
-              "linear-gradient(rgba(255,255,255,0.7) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.7) 1px, transparent 1px)",
-            backgroundSize: "70px 70px",
-          }}
-        />
-      </div>
+      <div className="pointer-events-none absolute -left-32 bottom-0 h-80 w-80 rounded-full bg-[#F8E1E5] opacity-80 blur-3xl" />
 
-      {/* NAVBAR */}
-      <nav className="relative z-20 mx-auto flex max-w-7xl items-center justify-between px-6 py-7 lg:px-10">
-        <a
-          href="#home"
-          className="text-sm font-semibold tracking-[0.22em] text-white"
-        >
-          M. SH
-        </a>
+      <div className="relative mx-auto grid w-full max-w-7xl items-center gap-14 lg:grid-cols-[1.15fr_0.85fr]">
+        {/* Main introduction */}
+        <div className="max-w-4xl">
+          <div className="mb-7 inline-flex items-center gap-3 rounded-full border border-[#E5C4CA] bg-white/90 px-4 py-2 shadow-sm">
+            <span className="h-2 w-2 rounded-full bg-[#C87584]" />
 
-        <div className="hidden items-center gap-8 text-[11px] uppercase tracking-[0.18em] text-white/50 md:flex">
-          <a href="#about" className="transition hover:text-white">
-            About
-          </a>
-
-          <a href="#skills" className="transition hover:text-white">
-            Skills
-          </a>
-
-          <a href="#experience" className="transition hover:text-white">
-            Experience
-          </a>
-
-          <a href="#projects" className="transition hover:text-white">
-            Projects
-          </a>
-
-          <a href="#education" className="transition hover:text-white">
-            Education
-          </a>
-
-          <a href="#contact" className="transition hover:text-white">
-            Contact
-          </a>
-        </div>
-
-        <a
-          href="#projects"
-          className="rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-[10px] uppercase tracking-[0.18em] text-white/70 transition hover:border-cyan-400/30 hover:text-white"
-        >
-          View Work
-        </a>
-      </nav>
-
-      {/* HERO CONTENT */}
-      <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-14 px-6 pb-20 pt-12 lg:grid-cols-[1fr_0.9fr] lg:px-10 lg:pb-28 lg:pt-16">
-        {/* LEFT SIDE */}
-        <div>
-          {/* Profile */}
-          <div className="mb-8 flex items-center gap-5">
-            <div className="relative h-16 w-16 overflow-hidden rounded-full border border-white/10 bg-white/5">
-              <Image
-                src="/profile.jpg"
-                alt="Maham Shaukat"
-                fill
-                priority
-                className="object-cover"
-              />
-            </div>
-
-            <div>
-              <p className="text-[10px] uppercase tracking-[0.28em] text-cyan-300/70">
-                AI Automation Laboratory
-              </p>
-
-              <p className="mt-2 text-xs text-white/35">
-                Intelligent systems · Automation · Generative AI
-              </p>
-            </div>
-          </div>
-
-          {/* Small heading */}
-          <div className="mb-5 flex items-center gap-3">
-            <span className="h-px w-8 bg-cyan-300/50" />
-
-            <span className="text-[10px] uppercase tracking-[0.3em] text-white/40">
-              Building intelligent systems
+            <span className="text-xs font-semibold tracking-[0.18em] text-[#765D63]">
+              AI AUTOMATION · GENERATIVE AI
             </span>
           </div>
 
-          {/* NAME */}
-          <h1 className="max-w-xl text-[clamp(3rem,6vw,5.5rem)] font-medium leading-[0.92] tracking-[-0.05em] text-white">
-            Maham{" "}
-            <span className="text-white/50">
-              Shaukat
-            </span>
+          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-[#A75D6B]">
+            Hello, I&apos;m
+          </p>
+
+          <h1 className="max-w-4xl font-serif text-5xl leading-[0.98] tracking-tight text-[#252326] sm:text-6xl md:text-7xl lg:text-[5.5rem]">
+            Maham Shaukat
           </h1>
 
-          {/* ROLE */}
-          <div className="mt-7">
-            <p className="text-xl font-medium tracking-[-0.02em] text-white/90 md:text-2xl">
-              AI Automation &amp; Generative AI Developer
-            </p>
+          <h2 className="mt-7 max-w-3xl text-2xl font-semibold leading-tight text-[#40383B] md:text-3xl">
+            AI Automation &amp; Generative AI Developer
+          </h2>
 
-            <p className="mt-5 max-w-xl text-sm leading-7 text-white/45 md:text-base">
-              I build intelligent systems that connect AI reasoning,
-              automation, APIs, and full-stack applications into practical
-              end-to-end workflows.
-            </p>
-          </div>
+          <p className="mt-6 max-w-2xl text-base leading-8 text-[#655D60] md:text-lg">
+            I build practical AI systems that connect intelligent reasoning,
+            automation, APIs, backend services, and user-facing applications
+            into complete workflows.
+          </p>
 
-          {/* TECHNOLOGIES */}
-          <div className="mt-7 flex flex-wrap gap-x-5 gap-y-2 text-[10px] uppercase tracking-[0.18em] text-white/40">
-            <span>Generative AI</span>
-            <span>AI Agents</span>
-            <span>RAG</span>
-            <span>LangChain</span>
-            <span>LangGraph</span>
-            <span>n8n</span>
-          </div>
-
-          {/* LOCATION */}
-          <div className="mt-7 flex items-center gap-3 text-xs text-white/35">
-            <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.8)]" />
-
-            Islamabad, Pakistan
-
-            <span className="text-white/15">•</span>
-
-            Open to remote AI opportunities
-          </div>
-
-          {/* BUTTONS */}
-          <div className="mt-9 flex flex-wrap gap-3">
+          {/* Hero buttons */}
+          <div className="mt-9 flex flex-col gap-3 sm:flex-row">
             <a
               href="#projects"
-              className="rounded-full bg-white px-6 py-3 text-[11px] font-medium uppercase tracking-[0.16em] text-black transition hover:bg-cyan-100"
+              className="inline-flex items-center justify-center rounded-full bg-[#C87584] px-7 py-3.5 text-sm font-semibold text-white shadow-[0_10px_25px_rgba(200,117,132,0.22)] transition duration-300 hover:-translate-y-0.5 hover:bg-[#B76575]"
             >
-              Explore My Work
+              View My Work
+              <span className="ml-2">↓</span>
             </a>
 
             <a
-              href="https://github.com/MahamHayatDev"
-              target="_blank"
-              rel="noreferrer"
-              className="rounded-full border border-white/10 bg-white/[0.025] px-6 py-3 text-[11px] uppercase tracking-[0.16em] text-white/70 transition hover:border-cyan-300/30 hover:text-white"
+              href="#contact"
+              className="inline-flex items-center justify-center rounded-full border-2 border-[#C87584] bg-white px-7 py-3.5 text-sm font-semibold text-[#8F4F5C] transition duration-300 hover:-translate-y-0.5 hover:bg-[#FCE3E7]"
             >
-              GitHub
+              Let&apos;s Connect
             </a>
-
-            <a
-              href="mailto:your-email@example.com"
-              className="rounded-full border border-white/10 bg-white/[0.025] px-6 py-3 text-[11px] uppercase tracking-[0.16em] text-white/70 transition hover:border-cyan-300/30 hover:text-white"
-            >
-              Email
-            </a>
-          </div>
-
-          {/* FOCUS TAGS */}
-          <div className="mt-9 flex flex-wrap gap-2">
-            {[
-              "AI Engineering",
-              "Automation",
-              "LLM Applications",
-              "AI Agents",
-            ].map((item) => (
-              <span
-                key={item}
-                className="rounded-full border border-white/7 bg-white/[0.02] px-3 py-1.5 text-[9px] uppercase tracking-[0.16em] text-white/35"
-              >
-                {item}
-              </span>
-            ))}
           </div>
         </div>
 
-        {/* RIGHT SIDE — AI SYSTEM PANEL */}
-        <div className="relative lg:pl-8">
-          <div className="absolute -left-1 top-10 hidden h-48 w-px bg-gradient-to-b from-transparent via-cyan-300/20 to-transparent lg:block" />
+        {/* Abstract AI visual — no personal photo */}
+        <div className="relative mx-auto w-full max-w-[430px] lg:justify-self-end">
+          <div className="absolute -inset-6 rounded-[2.5rem] bg-[#F5D5DC] opacity-70 blur-2xl" />
 
-          <div className="overflow-hidden rounded-2xl border border-white/10 bg-[#090d17]/85 shadow-2xl shadow-black/40 backdrop-blur-xl">
-            {/* PANEL HEADER */}
-            <div className="flex items-center justify-between border-b border-white/7 px-5 py-4">
-              <div className="flex items-center gap-2">
-                <span className="h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_10px_rgba(52,211,153,0.8)]" />
+          <div className="relative overflow-hidden rounded-[2rem] border border-[#E3C3C9] bg-white/90 p-7 shadow-[0_24px_70px_rgba(120,70,80,0.12)] backdrop-blur-sm md:p-9">
+            <div className="flex items-center justify-between border-b border-[#E9DDE0] pb-5">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#A75D6B]">
+                  AI Systems
+                </p>
 
-                <span className="text-[10px] uppercase tracking-[0.2em] text-white/45">
-                  AI Systems Console
-                </span>
+                <p className="mt-2 text-sm text-[#766B6E]">
+                  From reasoning to automation
+                </p>
               </div>
 
-              <span className="rounded-full border border-emerald-400/15 bg-emerald-400/5 px-2.5 py-1 text-[8px] uppercase tracking-[0.18em] text-emerald-300/70">
-                Online
+              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#FCE3E7] text-[#A75D6B]">
+                AI
               </span>
             </div>
 
-            {/* PANEL BODY */}
-            <div className="p-6 md:p-7">
-              {/* Workspace */}
-              <div className="mb-7 flex items-center justify-between">
-                <div>
-                  <p className="text-[9px] uppercase tracking-[0.25em] text-white/25">
-                    Workspace
-                  </p>
+            <div className="mt-7 space-y-4">
+              <div className="rounded-2xl border border-[#E9DDE0] bg-[#FFF8F9] p-4">
+                <div className="flex items-center gap-3">
+                  <span className="h-3 w-3 rounded-full bg-[#C87584]" />
 
-                  <p className="mt-1 font-mono text-sm text-white/80">
-                    maham@ai-lab
-                  </p>
+                  <span className="text-sm font-semibold text-[#40383B]">
+                    AI Reasoning
+                  </span>
                 </div>
 
-                <div className="text-right">
-                  <p className="text-[9px] uppercase tracking-[0.2em] text-white/25">
-                    Mode
-                  </p>
-
-                  <p className="mt-1 text-xs text-cyan-300/70">
-                    Engineering
-                  </p>
-                </div>
-              </div>
-
-              {/* FOCUS */}
-              <div className="border-l border-cyan-300/20 pl-4">
-                <p className="font-mono text-[11px] text-cyan-300/60">
-                  $ focus
-                </p>
-
-                <p className="mt-1 font-mono text-sm text-white/80">
-                  AI systems &amp; automation
+                <p className="mt-2 text-xs leading-6 text-[#766B6E]">
+                  LangChain · LangGraph · RAG · LLMs
                 </p>
               </div>
 
-              {/* STACK */}
-              <div className="mt-6 border-l border-purple-300/20 pl-4">
-                <p className="font-mono text-[11px] text-purple-300/60">
-                  $ stack
+              <div className="ml-8 rounded-2xl border border-[#E9DDE0] bg-white p-4">
+                <div className="flex items-center gap-3">
+                  <span className="h-3 w-3 rounded-full bg-[#D99BA6]" />
+
+                  <span className="text-sm font-semibold text-[#40383B]">
+                    Automation
+                  </span>
+                </div>
+
+                <p className="mt-2 text-xs leading-6 text-[#766B6E]">
+                  n8n · APIs · Webhooks · Workflows
                 </p>
-
-                <div className="mt-3 flex flex-wrap gap-2">
-                  {[
-                    "LangChain",
-                    "LangGraph",
-                    "n8n",
-                    "Groq",
-                    "Python",
-                    "Next.js",
-                  ].map((tech) => (
-                    <span
-                      key={tech}
-                      className="rounded-md border border-white/8 bg-white/[0.035] px-2.5 py-1.5 font-mono text-[10px] text-white/55"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
               </div>
 
-              {/* PROJECTS */}
-              <div className="mt-6 border-l border-cyan-300/20 pl-4">
-                <p className="font-mono text-[11px] text-cyan-300/60">
-                  $ builds
+              <div className="rounded-2xl border border-[#E9DDE0] bg-[#FFF8F9] p-4">
+                <div className="flex items-center gap-3">
+                  <span className="h-3 w-3 rounded-full bg-[#B96D7B]" />
+
+                  <span className="text-sm font-semibold text-[#40383B]">
+                    Applications
+                  </span>
+                </div>
+
+                <p className="mt-2 text-xs leading-6 text-[#766B6E]">
+                  Python · FastAPI · Next.js · Supabase
                 </p>
-
-                <div className="mt-3 space-y-3">
-                  {/* Project 1 */}
-                  <div className="flex items-center justify-between rounded-lg border border-white/7 bg-white/[0.025] px-3 py-3">
-                    <div>
-                      <p className="text-xs font-medium text-white/75">
-                        FinTech Ops Assistant
-                      </p>
-
-                      <p className="mt-1 text-[9px] uppercase tracking-[0.16em] text-white/25">
-                        Invoice intelligence
-                      </p>
-                    </div>
-
-                    <span className="text-[9px] text-emerald-300/60">
-                      AI
-                    </span>
-                  </div>
-
-                  {/* Project 2 */}
-                  <div className="flex items-center justify-between rounded-lg border border-white/7 bg-white/[0.025] px-3 py-3">
-                    <div>
-                      <p className="text-xs font-medium text-white/75">
-                        BusinessFlow AI
-                      </p>
-
-                      <p className="mt-1 text-[9px] uppercase tracking-[0.16em] text-white/25">
-                        AI commerce automation
-                      </p>
-                    </div>
-
-                    <span className="text-[9px] text-cyan-300/60">
-                      LIVE
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              {/* SYSTEM STATUS */}
-              <div className="mt-7 grid grid-cols-3 gap-2">
-                <div className="rounded-lg border border-white/7 bg-white/[0.02] p-3">
-                  <p className="text-[8px] uppercase tracking-[0.18em] text-white/25">
-                    Reasoning
-                  </p>
-
-                  <p className="mt-1 text-xs text-white/65">
-                    LLM
-                  </p>
-                </div>
-
-                <div className="rounded-lg border border-white/7 bg-white/[0.02] p-3">
-                  <p className="text-[8px] uppercase tracking-[0.18em] text-white/25">
-                    Workflow
-                  </p>
-
-                  <p className="mt-1 text-xs text-white/65">
-                    n8n
-                  </p>
-                </div>
-
-                <div className="rounded-lg border border-white/7 bg-white/[0.02] p-3">
-                  <p className="text-[8px] uppercase tracking-[0.18em] text-white/25">
-                    Interface
-                  </p>
-
-                  <p className="mt-1 text-xs text-white/65">
-                    Next.js
-                  </p>
-                </div>
-              </div>
-
-              {/* TERMINAL LINE */}
-              <div className="mt-6 font-mono text-[10px] text-white/25">
-                <span className="text-cyan-300/50">&gt;</span>{" "}
-                building useful systems
-                <span className="ml-1 animate-pulse">▋</span>
               </div>
             </div>
-          </div>
 
-          {/* FLOATING LABEL */}
-          <div className="absolute -bottom-5 -left-3 hidden rounded-xl border border-white/8 bg-[#0a0e18]/90 px-4 py-3 backdrop-blur-xl lg:block">
-            <p className="text-[8px] uppercase tracking-[0.2em] text-white/25">
-              Current focus
-            </p>
+            <div className="mt-7 rounded-2xl bg-[#252326] p-5">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#EBC1C8]">
+                Focus
+              </p>
 
-            <p className="mt-1 text-xs text-white/65">
-              AI + Automation + Full Stack
-            </p>
+              <p className="mt-2 text-sm leading-6 text-white/80">
+                Building useful AI systems that connect reasoning,
+                automation, and real applications.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-
-      {/* SCROLL */}
-      <div className="relative z-10 mx-auto flex max-w-7xl items-center gap-4 px-6 pb-8 lg:px-10">
-        <span className="h-px w-12 bg-white/10" />
-
-        <span className="text-[9px] uppercase tracking-[0.25em] text-white/25">
-          Scroll to explore
-        </span>
       </div>
     </section>
   );
 }
-

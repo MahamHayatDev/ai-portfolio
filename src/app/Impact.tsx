@@ -72,12 +72,12 @@ export default function Impact() {
             className="group relative rounded-2xl border border-[#2A3142] bg-[#10151F]/70 backdrop-blur p-7 min-h-[250px] transition-all duration-300 hover:border-[#2dd4bf]/50 hover:bg-[#10151F]/85 hover:-translate-y-1"
           >
             {/* Number */}
-            <div className="flex items-start justify-between mb-8">
+            <div className="relative flex items-start justify-between mb-8">
               <span className="text-5xl md:text-6xl font-serif text-[#E8E6DE] group-hover:text-[#2dd4bf] transition-colors duration-300">
                 {item.value}
               </span>
 
-              <span className="text-xs text-[#4B5563] font-mono">
+              <span aria-hidden="true" className="absolute right-0 top-1 text-xs text-[#4B5563] font-mono">
                 0{index + 1}
               </span>
             </div>
