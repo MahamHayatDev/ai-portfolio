@@ -2,59 +2,97 @@
 
 const demos = [
   {
-    title: "Fintech Ops Assistant",
+    number: "01",
+    title: "FinTech Ops Assistant",
     category: "AI AUTOMATION · FINTECH",
     description:
-      "An AI-powered invoice automation system using n8n, LangChain and Groq to extract invoice data, analyze vendor history and detect anomalies.",
+      "Invoice automation that extracts financial data, analyzes vendor history, detects anomalies, and sends results to a live dashboard.",
     video: "/videos/fintech-ops-demo.mp4",
     technologies: ["n8n", "LangChain", "Groq", "Next.js"],
+    accent: "#635BFF",
   },
   {
+    number: "02",
     title: "BusinessFlow AI",
-    category: "AI AUTOMATION · E-COMMERCE",
+    category: "GENAI · BUSINESS AUTOMATION",
     description:
-      "An AI shopping and business assistant designed for fashion brands, handling product questions, recommendations, policies and order workflows.",
+      "An AI business assistant that handles product questions, recommendations, stock checks, policies, and order workflows.",
     video: "/videos/business-flow-demo.mp4",
     technologies: ["Next.js", "Supabase", "Groq", "TypeScript"],
+    accent: "#B38D97",
   },
 ];
 
 export default function Demos() {
   return (
-    <section
-      id="demos"
-      className="relative mx-auto w-full max-w-7xl px-6 py-28 md:px-10"
-    >
-      {/* Background glow */}
-      <div className="pointer-events-none absolute left-1/2 top-20 h-80 w-80 -translate-x-1/2 rounded-full bg-cyan-500/10 blur-[120px]" />
-
+    <section id="demos" className="section">
       {/* Heading */}
-      <div className="relative mb-14 text-center">
-        <p className="mb-4 text-xs font-semibold tracking-[0.35em] text-cyan-300/70">
-          SYSTEM DEMOS
-        </p>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "end",
+          gap: "30px",
+          marginBottom: "45px",
+          flexWrap: "wrap",
+        }}
+      >
+        <div>
+          <div className="section-label">LIVE DEMOS</div>
 
-        <h2 className="font-serif text-4xl tracking-tight text-white md:text-6xl">
-          See the systems in action.
-        </h2>
+          <h2 className="section-title">
+            See the systems
+            <br />
+            <span style={{ color: "#635BFF" }}>in action.</span>
+          </h2>
+        </div>
 
-        <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-white/55 md:text-base">
-          Real demonstrations of the AI automation systems I built,
-          from workflow orchestration to reasoning and live dashboards.
+        <p
+          style={{
+            maxWidth: "430px",
+            margin: 0,
+            color: "#706A68",
+            lineHeight: 1.65,
+            fontSize: "0.95rem",
+          }}
+        >
+          Real demonstrations of AI systems built around
+          automation, reasoning, APIs, and business workflows.
         </p>
       </div>
 
       {/* Demo cards */}
-      <div className="relative grid gap-8 lg:grid-cols-2">
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(2, 1fr)",
+          gap: "24px",
+        }}
+      >
         {demos.map((demo) => (
           <article
-            key={demo.title}
-            className="group overflow-hidden rounded-3xl border border-white/10 bg-white/[0.035] shadow-2xl shadow-black/20 backdrop-blur-xl transition duration-500 hover:-translate-y-1 hover:border-cyan-300/20"
+            key={demo.number}
+            className="premium-card"
+            style={{
+              overflow: "hidden",
+            }}
           >
             {/* Video */}
-            <div className="relative aspect-video overflow-hidden bg-black">
+            <div
+              style={{
+                position: "relative",
+                aspectRatio: "16 / 9",
+                background: "#252B31",
+                overflow: "hidden",
+              }}
+            >
               <video
-                className="h-full w-full object-cover"
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                  display: "block",
+                }}
                 controls
                 preload="metadata"
                 playsInline
@@ -62,30 +100,82 @@ export default function Demos() {
                 <source src={demo.video} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
-
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
             </div>
 
             {/* Content */}
-            <div className="p-7 md:p-8">
-              <p className="mb-3 text-[10px] font-semibold tracking-[0.3em] text-cyan-300/70">
-                {demo.category}
-              </p>
+            <div style={{ padding: "28px" }}>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                  gap: "15px",
+                  marginBottom: "20px",
+                }}
+              >
+                <span
+                  style={{
+                    width: "40px",
+                    height: "40px",
+                    display: "grid",
+                    placeItems: "center",
+                    borderRadius: "12px",
+                    background: demo.accent,
+                    color: "white",
+                    fontSize: "0.7rem",
+                    fontWeight: 900,
+                  }}
+                >
+                  {demo.number}
+                </span>
 
-              <h3 className="font-serif text-2xl text-white md:text-3xl">
+                <span
+                  style={{
+                    color: "#706A68",
+                    fontSize: "0.67rem",
+                    fontWeight: 800,
+                    letterSpacing: "0.1em",
+                    textAlign: "right",
+                  }}
+                >
+                  {demo.category}
+                </span>
+              </div>
+
+              <h3
+                style={{
+                  margin: "0 0 12px",
+                  fontSize: "1.55rem",
+                  letterSpacing: "-0.035em",
+                }}
+              >
                 {demo.title}
               </h3>
 
-              <p className="mt-4 text-sm leading-7 text-white/55">
+              <p
+                style={{
+                  margin: "0 0 22px",
+                  color: "#706A68",
+                  fontSize: "0.9rem",
+                  lineHeight: 1.65,
+                }}
+              >
                 {demo.description}
               </p>
 
-              {/* Technology pills */}
-              <div className="mt-6 flex flex-wrap gap-2">
-                {demo.technologies.map((technology) => (
+              <div
+                style={{
+                  display: "flex",
+                  gap: "8px",
+                  flexWrap: "wrap",
+                }}
+              >
+                {demo.technologies.map((technology, index) => (
                   <span
                     key={technology}
-                    className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1.5 text-xs text-white/65"
+                    className={
+                      index < 2 ? "tech-tag-vibrant" : "tech-tag"
+                    }
                   >
                     {technology}
                   </span>
@@ -94,6 +184,42 @@ export default function Demos() {
             </div>
           </article>
         ))}
+      </div>
+
+      {/* Bottom statement */}
+      <div
+        style={{
+          marginTop: "28px",
+          padding: "22px 25px",
+          borderRadius: "20px",
+          background: "#424B54",
+          color: "white",
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          gap: "20px",
+          flexWrap: "wrap",
+        }}
+      >
+        <span
+          style={{
+            fontSize: "0.9rem",
+            fontWeight: 700,
+          }}
+        >
+          Built → automated → connected → deployed.
+        </span>
+
+        <span
+          style={{
+            color: "#EBCFB2",
+            fontSize: "0.72rem",
+            fontWeight: 800,
+            letterSpacing: "0.1em",
+          }}
+        >
+          WORKING SYSTEMS
+        </span>
       </div>
     </section>
   );

@@ -1,14 +1,24 @@
 @import "tailwindcss";
 
 :root {
-  --background: #fff9f8;
-  --foreground: #252326;
-  --blush: #fceff2;
-  --rose: #d98f9b;
-  --rose-light: #ebc1c8;
-  --muted: #706a6d;
-  --border: #e9dde0;
-  --card: #ffffff;
+  --cream: #FAF7F3;
+  --cream-dark: #F1ECE6;
+
+  --charcoal-blue: #424B54;
+  --charcoal-dark: #252B31;
+
+  --rosy-taupe: #B38D97;
+  --cotton-rose: #D5ACA9;
+  --desert-sand: #EBCFB2;
+  --silver: #C5BBAF;
+
+  --vibrant: #635BFF;
+  --vibrant-dark: #4E46D8;
+  --vibrant-light: #ECEAFF;
+
+  --muted: #6F6A68;
+  --white: #FFFFFF;
+  --border: #DED7D1;
 }
 
 * {
@@ -21,9 +31,10 @@ html {
 
 body {
   margin: 0;
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--cream);
+  color: var(--charcoal-dark);
   font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
 a {
@@ -33,59 +44,151 @@ a {
 
 button,
 a {
-  -webkit-tap-highlight-color: transparent;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+button:hover,
+a:hover {
+  transform: translateY(-2px);
 }
 
 ::selection {
-  background: #ebc1c8;
-  color: #252326;
+  background: var(--charcoal-blue);
+  color: white;
 }
 
-/* Soft scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
+/* Layout */
+
+.section {
+  width: min(1120px, 92%);
+  margin: 0 auto;
+  padding: 95px 0;
 }
 
-::-webkit-scrollbar-track {
-  background: #fff9f8;
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--charcoal-blue);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
 }
 
-::-webkit-scrollbar-thumb {
-  background: #e4c9ce;
+.section-label::before {
+  content: "";
+  width: 25px;
+  height: 3px;
   border-radius: 999px;
+  background: var(--vibrant);
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: #d98f9b;
+.section-title {
+  margin: 12px 0 18px;
+  font-size: clamp(2.1rem, 4vw, 3.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.045em;
 }
 
-/* Subtle reusable animations */
-@keyframes float {
-  0%,
-  100% {
-    transform: translateY(0);
+.section-description {
+  max-width: 650px;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* Buttons */
+
+.primary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 23px;
+  border-radius: 999px;
+  background: var(--charcoal-blue);
+  color: white;
+  font-weight: 800;
+  box-shadow: 0 10px 25px rgba(66, 75, 84, 0.2);
+}
+
+.primary-button:hover {
+  background: var(--charcoal-dark);
+}
+
+.secondary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 21px;
+  border: 2px solid var(--charcoal-blue);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--charcoal-blue);
+  font-weight: 800;
+}
+
+.secondary-button:hover {
+  background: var(--charcoal-blue);
+  color: white;
+}
+
+/* Cards */
+
+.premium-card {
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  background: var(--white);
+  box-shadow: 0 18px 55px rgba(66, 75, 84, 0.09);
+}
+
+.dark-card {
+  border-radius: 26px;
+  background: var(--charcoal-blue);
+  color: white;
+}
+
+.accent-card {
+  border-radius: 26px;
+  background: var(--vibrant);
+  color: white;
+}
+
+/* Tags */
+
+.tech-tag {
+  display: inline-flex;
+  padding: 7px 11px;
+  border-radius: 999px;
+  background: #E9E4DF;
+  color: var(--charcoal-blue);
+  font-size: 0.76rem;
+  font-weight: 800;
+}
+
+.tech-tag-vibrant {
+  display: inline-flex;
+  padding: 7px 11px;
+  border-radius: 999px;
+  background: var(--vibrant-light);
+  color: var(--vibrant-dark);
+  font-size: 0.76rem;
+  font-weight: 800;
+}
+
+/* Mobile */
+
+@media (max-width: 800px) {
+  .section {
+    padding: 70px 0;
   }
 
-  50% {
-    transform: translateY(-8px);
+  .section-title {
+    font-size: 2.3rem;
   }
-}
-
-@keyframes softPulse {
-  0%,
-  100% {
-    opacity: 0.45;
-  }
-
-  50% {
-    opacity: 0.8;
-  }
-}
-
-.animate-soft-float {
-  animation: float 6s ease-in-out infinite;
-}
-
-.animate-soft-pulse {
-  animation: softPulse 4s ease-in-out infinite;
 }

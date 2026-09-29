@@ -1,139 +1,287 @@
+"use client";
+
 export default function Hero() {
+  const systems = [
+    ["01", "Generative AI"],
+    ["02", "RAG & Agents"],
+    ["03", "n8n Automation"],
+    ["04", "APIs & Backend"],
+  ];
+
   return (
     <section
-      id="home"
-      className="relative flex min-h-[88vh] items-center overflow-hidden bg-[#FFF4F5] px-6 py-24 md:px-10 lg:px-16"
+      style={{
+        minHeight: "92vh",
+        display: "flex",
+        alignItems: "center",
+        position: "relative",
+        overflow: "hidden",
+        padding: "70px 0",
+      }}
     >
-      <div className="pointer-events-none absolute -right-32 top-10 h-96 w-96 rounded-full bg-[#F5D5DC] opacity-70 blur-3xl" />
+      {/* Subtle background accents */}
+      <div
+        style={{
+          position: "absolute",
+          width: "420px",
+          height: "420px",
+          borderRadius: "50%",
+          background: "#EBCFB2",
+          opacity: 0.32,
+          top: "-180px",
+          right: "-100px",
+        }}
+      />
 
-      <div className="pointer-events-none absolute -left-32 bottom-0 h-80 w-80 rounded-full bg-[#F8E1E5] opacity-80 blur-3xl" />
+      <div
+        style={{
+          position: "absolute",
+          width: "260px",
+          height: "260px",
+          borderRadius: "50%",
+          background: "#D5ACA9",
+          opacity: 0.2,
+          bottom: "-130px",
+          left: "-90px",
+        }}
+      />
 
-      <div className="relative mx-auto grid w-full max-w-7xl items-center gap-14 lg:grid-cols-[1.15fr_0.85fr]">
-        {/* Main introduction */}
-        <div className="max-w-4xl">
-          <div className="mb-7 inline-flex items-center gap-3 rounded-full border border-[#E5C4CA] bg-white/90 px-4 py-2 shadow-sm">
-            <span className="h-2 w-2 rounded-full bg-[#C87584]" />
+      <div
+        className="section"
+        style={{
+          position: "relative",
+          zIndex: 2,
+          paddingTop: "55px",
+          paddingBottom: "55px",
+        }}
+      >
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "1.1fr 0.9fr",
+            gap: "70px",
+            alignItems: "center",
+          }}
+        >
+          {/* LEFT */}
+          <div>
+            <div className="section-label">
+              AI AUTOMATION • GENAI • RAG
+            </div>
 
-            <span className="text-xs font-semibold tracking-[0.18em] text-[#765D63]">
-              AI AUTOMATION · GENERATIVE AI
-            </span>
+            <h1
+              style={{
+                margin: "22px 0",
+                fontSize: "clamp(3.3rem, 7vw, 6.3rem)",
+                lineHeight: 0.94,
+                letterSpacing: "-0.07em",
+                maxWidth: "800px",
+                color: "#252B31",
+              }}
+            >
+              Building
+              <br />
+              <span style={{ color: "#635BFF" }}>intelligent</span>
+              <br />
+              systems.
+            </h1>
+
+            <p
+              style={{
+                maxWidth: "570px",
+                margin: "0 0 30px",
+                color: "#6F6A68",
+                fontSize: "1.08rem",
+                lineHeight: 1.65,
+              }}
+            >
+              AI automation systems connecting models, data,
+              APIs, and real business workflows.
+            </p>
+
+            <div
+              style={{
+                display: "flex",
+                gap: "13px",
+                flexWrap: "wrap",
+              }}
+            >
+              <a href="#projects" className="primary-button">
+                Explore Projects →
+              </a>
+
+              <a href="#demos" className="secondary-button">
+                Live Demos
+              </a>
+            </div>
+
+            <div
+              style={{
+                display: "flex",
+                flexWrap: "wrap",
+                gap: "9px",
+                marginTop: "28px",
+              }}
+            >
+              <span className="tech-tag">Python</span>
+              <span className="tech-tag">LangChain</span>
+              <span className="tech-tag-vibrant">RAG</span>
+              <span className="tech-tag-vibrant">n8n</span>
+              <span className="tech-tag">APIs</span>
+            </div>
           </div>
 
-          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-[#A75D6B]">
-            Hello, I&apos;m
-          </p>
-
-          <h1 className="max-w-4xl font-serif text-5xl leading-[0.98] tracking-tight text-[#252326] sm:text-6xl md:text-7xl lg:text-[5.5rem]">
-            Maham Shaukat
-          </h1>
-
-          <h2 className="mt-7 max-w-3xl text-2xl font-semibold leading-tight text-[#40383B] md:text-3xl">
-            AI Automation &amp; Generative AI Developer
-          </h2>
-
-          <p className="mt-6 max-w-2xl text-base leading-8 text-[#655D60] md:text-lg">
-            I build practical AI systems that connect intelligent reasoning,
-            automation, APIs, backend services, and user-facing applications
-            into complete workflows.
-          </p>
-
-          {/* Hero buttons */}
-          <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-            <a
-              href="#projects"
-              className="inline-flex items-center justify-center rounded-full bg-[#C87584] px-7 py-3.5 text-sm font-semibold text-white shadow-[0_10px_25px_rgba(200,117,132,0.22)] transition duration-300 hover:-translate-y-0.5 hover:bg-[#B76575]"
+          {/* RIGHT — AI SYSTEMS PANEL */}
+          <div
+            className="dark-card"
+            style={{
+              padding: "30px",
+              minHeight: "440px",
+              position: "relative",
+              overflow: "hidden",
+              boxShadow: "0 25px 65px rgba(66, 75, 84, 0.2)",
+            }}
+          >
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+                marginBottom: "34px",
+              }}
             >
-              View My Work
-              <span className="ml-2">↓</span>
-            </a>
+              <span
+                style={{
+                  fontSize: "0.74rem",
+                  letterSpacing: "0.13em",
+                  fontWeight: 800,
+                  color: "#D9D5D2",
+                }}
+              >
+                AI SYSTEMS
+              </span>
 
-            <a
-              href="#contact"
-              className="inline-flex items-center justify-center rounded-full border-2 border-[#C87584] bg-white px-7 py-3.5 text-sm font-semibold text-[#8F4F5C] transition duration-300 hover:-translate-y-0.5 hover:bg-[#FCE3E7]"
-            >
-              Let&apos;s Connect
-            </a>
-          </div>
-        </div>
-
-        {/* Abstract AI visual — no personal photo */}
-        <div className="relative mx-auto w-full max-w-[430px] lg:justify-self-end">
-          <div className="absolute -inset-6 rounded-[2.5rem] bg-[#F5D5DC] opacity-70 blur-2xl" />
-
-          <div className="relative overflow-hidden rounded-[2rem] border border-[#E3C3C9] bg-white/90 p-7 shadow-[0_24px_70px_rgba(120,70,80,0.12)] backdrop-blur-sm md:p-9">
-            <div className="flex items-center justify-between border-b border-[#E9DDE0] pb-5">
-              <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#A75D6B]">
-                  AI Systems
-                </p>
-
-                <p className="mt-2 text-sm text-[#766B6E]">
-                  From reasoning to automation
-                </p>
-              </div>
-
-              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#FCE3E7] text-[#A75D6B]">
-                AI
+              <span
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "7px",
+                  fontSize: "0.7rem",
+                  fontWeight: 800,
+                  color: "#EBCFB2",
+                }}
+              >
+                <span
+                  style={{
+                    width: "8px",
+                    height: "8px",
+                    borderRadius: "50%",
+                    background: "#635BFF",
+                  }}
+                />
+                ACTIVE
               </span>
             </div>
 
-            <div className="mt-7 space-y-4">
-              <div className="rounded-2xl border border-[#E9DDE0] bg-[#FFF8F9] p-4">
-                <div className="flex items-center gap-3">
-                  <span className="h-3 w-3 rounded-full bg-[#C87584]" />
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                gap: "12px",
+              }}
+            >
+              {systems.map(([number, title], index) => (
+                <div
+                  key={number}
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "15px",
+                    padding: "15px",
+                    borderRadius: "16px",
+                    background: "#505861",
+                    border: "1px solid #626B74",
+                  }}
+                >
+                  <span
+                    style={{
+                      width: "40px",
+                      height: "40px",
+                      flexShrink: 0,
+                      display: "grid",
+                      placeItems: "center",
+                      borderRadius: "12px",
+                      background:
+                        index === 0
+                          ? "#635BFF"
+                          : index === 1
+                            ? "#B38D97"
+                            : index === 2
+                              ? "#EBCFB2"
+                              : "#C5BBAF",
+                      color: index >= 2 ? "#424B54" : "white",
+                      fontSize: "0.72rem",
+                      fontWeight: 900,
+                    }}
+                  >
+                    {number}
+                  </span>
 
-                  <span className="text-sm font-semibold text-[#40383B]">
-                    AI Reasoning
+                  <span
+                    style={{
+                      fontWeight: 800,
+                      fontSize: "0.96rem",
+                    }}
+                  >
+                    {title}
                   </span>
                 </div>
-
-                <p className="mt-2 text-xs leading-6 text-[#766B6E]">
-                  LangChain · LangGraph · RAG · LLMs
-                </p>
-              </div>
-
-              <div className="ml-8 rounded-2xl border border-[#E9DDE0] bg-white p-4">
-                <div className="flex items-center gap-3">
-                  <span className="h-3 w-3 rounded-full bg-[#D99BA6]" />
-
-                  <span className="text-sm font-semibold text-[#40383B]">
-                    Automation
-                  </span>
-                </div>
-
-                <p className="mt-2 text-xs leading-6 text-[#766B6E]">
-                  n8n · APIs · Webhooks · Workflows
-                </p>
-              </div>
-
-              <div className="rounded-2xl border border-[#E9DDE0] bg-[#FFF8F9] p-4">
-                <div className="flex items-center gap-3">
-                  <span className="h-3 w-3 rounded-full bg-[#B96D7B]" />
-
-                  <span className="text-sm font-semibold text-[#40383B]">
-                    Applications
-                  </span>
-                </div>
-
-                <p className="mt-2 text-xs leading-6 text-[#766B6E]">
-                  Python · FastAPI · Next.js · Supabase
-                </p>
-              </div>
+              ))}
             </div>
 
-            <div className="mt-7 rounded-2xl bg-[#252326] p-5">
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#EBC1C8]">
-                Focus
-              </p>
+            <div
+              style={{
+                position: "absolute",
+                left: "30px",
+                right: "30px",
+                bottom: "27px",
+              }}
+            >
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  marginBottom: "9px",
+                  color: "#C5BBAF",
+                  fontSize: "0.7rem",
+                  fontWeight: 700,
+                }}
+              >
+                <span>WORKFLOW</span>
+                <span>END-TO-END</span>
+              </div>
 
-              <p className="mt-2 text-sm leading-6 text-white/80">
-                Building useful AI systems that connect reasoning,
-                automation, and real applications.
-              </p>
+              <div
+                style={{
+                  height: "5px",
+                  borderRadius: "999px",
+                  background:
+                    "linear-gradient(90deg, #635BFF 0%, #B38D97 50%, #EBCFB2 100%)",
+                }}
+              />
             </div>
           </div>
         </div>
       </div>
+
+      <style jsx>{`
+        @media (max-width: 850px) {
+          section > div > div {
+            grid-template-columns: 1fr !important;
+            gap: 45px !important;
+          }
+        }
+      `}</style>
     </section>
   );
 }

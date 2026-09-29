@@ -4,12 +4,11 @@ import About from "./About";
 import Skills from "./Skills";
 import Projects from "./Projects";
 import Demos from "./Demos";
-import Education from "./Education";
 import Contact from "./Contact";
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen overflow-hidden bg-[#FFF9F8] text-[#252326]">
+    <main className="relative min-h-screen overflow-hidden bg-[#FAF7F3] text-[#252B31]">
       <Scene3D />
 
       <div className="relative z-10">
@@ -31,10 +30,6 @@ export default function Home() {
 
         <section id="skills" className="relative">
           <Skills />
-        </section>
-
-        <section id="education" className="relative">
-          <Education />
         </section>
 
         <section id="contact" className="relative">

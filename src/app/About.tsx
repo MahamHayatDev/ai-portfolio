@@ -1,118 +1,134 @@
 export default function About() {
+  const highlights = [
+    {
+      number: "01",
+      title: "AI Systems",
+      text: "GenAI applications, RAG pipelines, and intelligent agents.",
+      accent: "#635BFF",
+    },
+    {
+      number: "02",
+      title: "Automation",
+      text: "n8n workflows connecting AI, APIs, and business processes.",
+      accent: "#B38D97",
+    },
+    {
+      number: "03",
+      title: "FinTech",
+      text: "AI-powered systems for invoices, data, and financial operations.",
+      accent: "#EBCFB2",
+    },
+  ];
+
   return (
-    <section
-      id="about"
-      className="relative overflow-hidden px-6 py-24 md:px-10 md:py-28 lg:px-16"
-    >
-      <div className="pointer-events-none absolute right-0 top-20 h-72 w-72 rounded-full bg-[#FCEFF2] blur-3xl" />
-
-      <div className="relative mx-auto max-w-7xl">
+    <section id="about" className="section">
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "0.8fr 1.2fr",
+          gap: "70px",
+          alignItems: "start",
+        }}
+      >
         {/* Heading */}
-        <div className="mb-12 max-w-3xl">
-          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.28em] text-[#B46F7B]">
-            Profile
-          </p>
+        <div>
+          <div className="section-label">ABOUT ME</div>
 
-          <h2 className="font-serif text-4xl tracking-tight text-[#252326] md:text-5xl">
-            I build AI systems that do more than generate text.
+          <h2 className="section-title">
+            Turning ideas into
+            <br />
+            <span style={{ color: "#635BFF" }}>working systems.</span>
           </h2>
+        </div>
 
-          <p className="mt-5 text-base leading-8 text-[#706A6D] md:text-lg">
-            My focus is practical Generative AI, intelligent automation, and
-            end-to-end application development.
+        {/* Content */}
+        <div>
+          <p
+            style={{
+              margin: "0 0 28px",
+              fontSize: "1.12rem",
+              lineHeight: 1.7,
+              color: "#424B54",
+              maxWidth: "650px",
+            }}
+          >
+            I’m Maham, a Financial Technology student focused on
+            Generative AI, automation, and intelligent applications.
           </p>
-        </div>
 
-        <div className="grid items-start gap-10 lg:grid-cols-[1fr_380px]">
-          {/* Main content */}
-          <div className="rounded-3xl border border-[#E9DDE0] bg-white p-7 shadow-[0_18px_60px_rgba(82,54,60,0.06)] md:p-10">
-            <div className="space-y-6 text-base leading-8 text-[#5F585B] md:text-lg">
-              <p>
-                I&apos;m an AI and automation developer focused on building
-                practical Generative AI applications, intelligent agents, and
-                end-to-end automation systems.
-              </p>
+          <p
+            style={{
+              margin: "0 0 35px",
+              fontSize: "0.98rem",
+              lineHeight: 1.7,
+              color: "#706A68",
+              maxWidth: "620px",
+            }}
+          >
+            I enjoy turning real business problems into practical
+            AI-powered workflows using modern tools and APIs.
+          </p>
 
-              <p>
-                My work combines{" "}
-                <strong className="font-medium text-[#3B3538]">
-                  RAG, AI agents, LangChain, LangGraph, n8n, APIs, and LLM
-                  integrations
-                </strong>{" "}
-                to turn ideas into working applications. I also work across
-                backend and frontend systems using Python, FastAPI, Next.js,
-                React, TypeScript, Supabase, and REST APIs.
-              </p>
+          {/* Highlights */}
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(3, 1fr)",
+              gap: "14px",
+            }}
+          >
+            {highlights.map((item) => (
+              <div
+                key={item.number}
+                className="premium-card"
+                style={{
+                  padding: "20px",
+                  position: "relative",
+                  overflow: "hidden",
+                }}
+              >
+                <div
+                  style={{
+                    width: "38px",
+                    height: "38px",
+                    display: "grid",
+                    placeItems: "center",
+                    borderRadius: "11px",
+                    background: item.accent,
+                    color:
+                      item.accent === "#EBCFB2"
+                        ? "#424B54"
+                        : "white",
+                    fontSize: "0.7rem",
+                    fontWeight: 900,
+                    marginBottom: "18px",
+                  }}
+                >
+                  {item.number}
+                </div>
 
-              <p>
-                I enjoy building systems that go beyond simple AI
-                demonstrations: designing the workflow, connecting services,
-                implementing the reasoning layer, automating processes, and
-                presenting the results through usable interfaces.
-              </p>
-            </div>
+                <h3
+                  style={{
+                    margin: "0 0 8px",
+                    fontSize: "0.98rem",
+                  }}
+                >
+                  {item.title}
+                </h3>
 
-            <div className="my-8 h-px bg-[#E9DDE0]" />
-
-            <div className="rounded-2xl bg-[#FCEFF2] p-5 md:p-6">
-              <p className="text-sm leading-7 text-[#51494C] md:text-base">
-                <span className="font-semibold text-[#3B3538]">
-                  My approach:
-                </span>{" "}
-                build AI systems that are reliable, explainable, and useful in
-                real-world workflows — not just models that produce impressive
-                outputs.
-              </p>
-            </div>
+                <p
+                  style={{
+                    margin: 0,
+                    color: "#706A68",
+                    fontSize: "0.82rem",
+                    lineHeight: 1.55,
+                  }}
+                >
+                  {item.text}
+                </p>
+              </div>
+            ))}
           </div>
-
-          {/* Profile card */}
-          <div className="overflow-hidden rounded-3xl border border-[#E9DDE0] bg-white p-3 shadow-[0_18px_60px_rgba(82,54,60,0.07)]">
-            <img
-              src="/photo.jpg"
-              alt="Maham Shaukat"
-              className="h-[440px] w-full rounded-[1.35rem] object-cover"
-            />
-
-            <div className="p-5">
-              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#B46F7B]">
-                Current focus
-              </p>
-
-              <p className="mt-3 text-sm leading-6 text-[#5F585B]">
-                AI automation · Generative AI · Agentic workflows · Backend
-                systems
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Links */}
-        <div className="mt-8 flex flex-wrap gap-3">
-          <a
-            href="mailto:mahamhayat192@gmail.com"
-            className="rounded-full border border-[#E9DDE0] bg-white px-5 py-2.5 text-sm font-medium text-[#4F494C] transition hover:border-[#D98F9B] hover:bg-[#FCEFF2]"
-          >
-            Email
-          </a>
-
-          <a
-            href="https://github.com/MahamHayatDev"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-full border border-[#E9DDE0] bg-white px-5 py-2.5 text-sm font-medium text-[#4F494C] transition hover:border-[#D98F9B] hover:bg-[#FCEFF2]"
-          >
-            GitHub
-          </a>
-
-          <a
-            href="https://github.com/MahamHayatDev/fintech-ops-assistant"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-full border border-[#E9DDE0] bg-white px-5 py-2.5 text-sm font-medium text-[#4F494C] transition hover:border-[#D98F9B] hover:bg-[#FCEFF2]"
-          >
-            Latest Project
-          </a>
         </div>
       </div>
     </section>
