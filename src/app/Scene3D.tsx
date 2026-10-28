@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 export default function Scene3D() {
   return (
@@ -12,15 +12,15 @@ export default function Scene3D() {
 
       <div className="absolute -left-48 top-[38%] h-[460px] w-[460px] rounded-full bg-[#FCEFF2] opacity-55 blur-3xl" />
 
-      <div className="absolute right-[20%] bottom-[-180px] h-[420px] w-[420px] rounded-full bg-[#EBC1C8] opacity-20 blur-3xl" />
+      <div className="absolute right-[20%] bottom-[-180px] h-[420px] w-[420px] rounded-full bg-[#F9A8D4] opacity-20 blur-3xl" />
 
-      <div className="absolute left-[12%] top-[18%] h-2 w-2 rounded-full bg-[#D98F9B] opacity-50" />
+      <div className="absolute left-[12%] top-[18%] h-2 w-2 rounded-full bg-[#FF4FA3] opacity-50" />
 
-      <div className="absolute right-[16%] top-[32%] h-1.5 w-1.5 rounded-full bg-[#D98F9B] opacity-40" />
+      <div className="absolute right-[16%] top-[32%] h-1.5 w-1.5 rounded-full bg-[#FF4FA3] opacity-40" />
 
-      <div className="absolute left-[8%] bottom-[24%] h-1.5 w-1.5 rounded-full bg-[#EBC1C8] opacity-60" />
+      <div className="absolute left-[8%] bottom-[24%] h-1.5 w-1.5 rounded-full bg-[#F9A8D4] opacity-60" />
 
-      <div className="absolute right-[8%] bottom-[18%] h-2 w-2 rounded-full bg-[#D98F9B] opacity-35" />
+      <div className="absolute right-[8%] bottom-[18%] h-2 w-2 rounded-full bg-[#FF4FA3] opacity-35" />
     </div>
   );
 }

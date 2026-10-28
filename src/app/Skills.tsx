@@ -1,4 +1,4 @@
-const SKILL_CATEGORIES: Record<
+﻿const SKILL_CATEGORIES: Record<
   string,
   { description: string; skills: string[]; accent: string }
 > = {
@@ -12,23 +12,23 @@ const SKILL_CATEGORIES: Record<
       "Vector Databases",
       "Structured Outputs",
     ],
-    accent: "#635BFF",
+    accent: "#00E5FF",
   },
 
   "AI Agents": {
-    description: "Designing reasoning and multi-step AI workflows.",
+    description: "Building intelligent agents and multi-step workflows.",
     skills: [
       "LangChain",
       "LangGraph",
       "Agentic Workflows",
       "Tool Calling",
-      "Agent Reasoning",
-      "Anomaly Detection",
+      "Human-in-the-Loop",
+      "AI Decision Workflows",
     ],
-    accent: "#B38D97",
+    accent: "#FF4FA3",
   },
 
-  "Automation": {
+  Automation: {
     description: "Connecting AI, APIs, and business processes.",
     skills: [
       "n8n",
@@ -38,7 +38,7 @@ const SKILL_CATEGORIES: Record<
       "HTTP Requests",
       "Process Automation",
     ],
-    accent: "#EBCFB2",
+    accent: "#00E5FF",
   },
 
   "Backend & APIs": {
@@ -51,10 +51,10 @@ const SKILL_CATEGORIES: Record<
       "Groq API",
       "JSON Processing",
     ],
-    accent: "#635BFF",
+    accent: "#FF4FA3",
   },
 
-  "Frontend": {
+  Frontend: {
     description: "Creating interfaces for AI-powered applications.",
     skills: [
       "Next.js",
@@ -62,13 +62,13 @@ const SKILL_CATEGORIES: Record<
       "TypeScript",
       "Tailwind CSS",
       "Dashboards",
-      "Recharts",
+      "Data Visualization",
     ],
-    accent: "#B38D97",
+    accent: "#00E5FF",
   },
 
   "Data & Infrastructure": {
-    description: "Working with data, deployment, and development tools.",
+    description: "Connecting application data, storage, and deployment.",
     skills: [
       "Supabase",
       "Vector Storage",
@@ -77,140 +77,89 @@ const SKILL_CATEGORIES: Record<
       "Git",
       "GitHub",
     ],
-    accent: "#EBCFB2",
+    accent: "#FF4FA3",
   },
 };
 
 export default function Skills() {
   return (
-    <section id="skills" className="section">
-      {/* Heading */}
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "end",
-          gap: "30px",
-          marginBottom: "45px",
-          flexWrap: "wrap",
-        }}
-      >
-        <div>
-          <div className="section-label">TECHNICAL STACK</div>
+    <section
+      id="skills"
+      className="relative overflow-hidden bg-[#050505] px-6 py-24 md:px-10 md:py-28 lg:px-16"
+    >
+      <div className="pointer-events-none absolute -right-20 top-10 h-80 w-80 rounded-full bg-[#FF4FA3]/25 blur-3xl" />
 
-          <h2 className="section-title">
-            Tools behind
-            <br />
-            <span style={{ color: "#635BFF" }}>the systems.</span>
-          </h2>
+      <div className="pointer-events-none absolute -left-20 bottom-20 h-72 w-72 rounded-full bg-[#00E5FF]/[0.04] blur-3xl" />
+
+      <div className="relative mx-auto max-w-7xl">
+        <div className="mb-14 flex flex-wrap items-end justify-between gap-8">
+          <div>
+            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.28em] text-[#00E5FF]">
+              Technical Stack
+            </p>
+
+            <h2 className="font-serif text-4xl tracking-tight text-[#F5F5F7] md:text-5xl">
+              Tools behind
+              <br />
+              <span className="text-[#FF4FA3]">the systems.</span>
+            </h2>
+          </div>
+
+          <p className="max-w-[430px] text-sm leading-7 text-[#9CA3AF] md:text-base">
+            A practical stack spanning Generative AI, intelligent agents,
+            automation, backend APIs, frontend applications, and data.
+          </p>
         </div>
 
-        <p
-          style={{
-            maxWidth: "430px",
-            margin: 0,
-            color: "#706A68",
-            lineHeight: 1.65,
-            fontSize: "0.95rem",
-          }}
-        >
-          A practical stack spanning Generative AI, agents,
-          automation, backend APIs, frontend applications, and data.
-        </p>
-      </div>
-
-      {/* Skills grid */}
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(3, 1fr)",
-          gap: "18px",
-        }}
-      >
-        {Object.entries(SKILL_CATEGORIES).map(
-          ([category, data]) => (
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {Object.entries(SKILL_CATEGORIES).map(([category, data]) => (
             <article
               key={category}
-              className="premium-card"
-              style={{
-                padding: "25px",
-                position: "relative",
-                overflow: "hidden",
-              }}
+              className="group relative overflow-hidden rounded-3xl border border-[#1F2937] bg-[#0E0E12] p-6 transition-all duration-300 hover:-translate-y-1 hover:border-[#00E5FF]/40 hover:shadow-[0_18px_55px_rgba(0,229,255,0.06)] md:p-7"
             >
-              {/* Accent line */}
               <div
-                style={{
-                  position: "absolute",
-                  top: 0,
-                  left: 0,
-                  width: "100%",
-                  height: "4px",
-                  background: data.accent,
-                }}
+                className="absolute left-0 top-0 h-[3px] w-full opacity-80 transition-opacity duration-300 group-hover:opacity-100"
+                style={{ backgroundColor: data.accent }}
               />
 
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "center",
-                  gap: "12px",
-                  marginBottom: "13px",
-                }}
-              >
-                <h3
-                  style={{
-                    margin: 0,
-                    fontSize: "1.05rem",
-                    letterSpacing: "-0.02em",
-                  }}
-                >
+              <div className="mb-4 flex items-center justify-between gap-3">
+                <h3 className="text-lg font-semibold tracking-tight text-[#F5F5F7]">
                   {category}
                 </h3>
 
                 <span
+                  className="grid h-9 w-9 shrink-0 place-items-center rounded-xl border text-xs font-bold"
                   style={{
-                    minWidth: "28px",
-                    height: "28px",
-                    display: "grid",
-                    placeItems: "center",
-                    borderRadius: "9px",
-                    background: "#F1ECE6",
-                    color: "#424B54",
-                    fontSize: "0.68rem",
-                    fontWeight: 900,
+                    borderColor: `${data.accent}40`,
+                    backgroundColor: `${data.accent}12`,
+                    color: data.accent,
                   }}
                 >
-                  {data.skills.length}
+                  {String(data.skills.length).padStart(2, "0")}
                 </span>
               </div>
 
-              <p
-                style={{
-                  margin: "0 0 18px",
-                  color: "#706A68",
-                  fontSize: "0.8rem",
-                  lineHeight: 1.5,
-                }}
-              >
+              <p className="mb-6 text-sm leading-6 text-[#9CA3AF]">
                 {data.description}
               </p>
 
-              <div
-                style={{
-                  display: "flex",
-                  flexWrap: "wrap",
-                  gap: "7px",
-                }}
-              >
+              <div className="flex flex-wrap gap-2">
                 {data.skills.map((skill, index) => (
                   <span
                     key={skill}
-                    className={
+                    className="rounded-full border px-3 py-1.5 text-xs font-medium transition-colors duration-200"
+                    style={
                       index < 2
-                        ? "tech-tag-vibrant"
-                        : "tech-tag"
+                        ? {
+                            borderColor: `${data.accent}55`,
+                            backgroundColor: `${data.accent}0D`,
+                            color: data.accent,
+                          }
+                        : {
+                            borderColor: "#1F2937",
+                            backgroundColor: "#09090B",
+                            color: "#B4B4BE",
+                          }
                     }
                   >
                     {skill}
@@ -218,63 +167,35 @@ export default function Skills() {
                 ))}
               </div>
             </article>
-          )
-        )}
-      </div>
-
-      {/* Core focus */}
-      <div
-        style={{
-          marginTop: "25px",
-          padding: "25px 28px",
-          borderRadius: "22px",
-          background: "#424B54",
-          color: "white",
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          gap: "25px",
-          flexWrap: "wrap",
-        }}
-      >
-        <div>
-          <div
-            style={{
-              marginBottom: "7px",
-              color: "#EBCFB2",
-              fontSize: "0.68rem",
-              fontWeight: 900,
-              letterSpacing: "0.12em",
-            }}
-          >
-            CORE FOCUS
-          </div>
-
-          <p
-            style={{
-              margin: 0,
-              fontSize: "0.92rem",
-              lineHeight: 1.6,
-              color: "rgba(255,255,255,0.82)",
-            }}
-          >
-            Connecting AI reasoning, automation, APIs, data,
-            and user-facing applications into complete workflows.
-          </p>
+          ))}
         </div>
 
-        <div
-          style={{
-            color: "#ECEAFF",
-            fontSize: "0.72rem",
-            fontWeight: 800,
-            letterSpacing: "0.08em",
-            whiteSpace: "nowrap",
-          }}
-        >
-          AI → AUTOMATION → APPLICATION
+        <div className="relative mt-8 overflow-hidden rounded-3xl border border-[#1F2937] bg-[#0E0E12] p-7 md:p-9">
+          <div className="pointer-events-none absolute -right-10 -top-20 h-48 w-48 rounded-full bg-[#FF4FA3]/10 blur-3xl" />
+
+          <div className="relative flex flex-col justify-between gap-7 md:flex-row md:items-center">
+            <div className="max-w-2xl">
+              <p className="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-[#00E5FF]">
+                Core Focus
+              </p>
+
+              <p className="text-sm leading-7 text-[#C4C4CC] md:text-base">
+                Building end-to-end AI systems that connect intelligent agents,
+                business workflows, APIs, and data into practical applications.
+              </p>
+            </div>
+
+            <div className="flex flex-wrap items-center gap-2 text-xs font-bold uppercase tracking-[0.12em] sm:text-sm">
+              <span className="text-[#F5F5F7]">AI</span>
+              <span className="text-[#00E5FF]">→</span>
+              <span className="text-[#00E5FF]">Automation</span>
+              <span className="text-[#FF4FA3]">→</span>
+              <span className="text-[#FF4FA3]">Application</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
   );
 }
+

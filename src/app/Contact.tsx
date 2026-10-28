@@ -1,80 +1,116 @@
-export default function Contact() {
-  return (
-    <section
-      id="contact"
-      className="relative overflow-hidden bg-[#252326] px-6 py-24 text-white md:px-10 md:py-28 lg:px-16"
-    >
-      <div className="pointer-events-none absolute -right-24 -top-24 h-80 w-80 rounded-full bg-[#D98F9B]/20 blur-3xl" />
-      <div className="pointer-events-none absolute -bottom-32 -left-24 h-80 w-80 rounded-full bg-[#EBC1C8]/10 blur-3xl" />
+﻿export default function Contact() {
+return ( <section
+   id="contact"
+   className="relative overflow-hidden border-t border-[#1F2937] bg-[#050505] px-6 py-24 text-[#F5F5F7] md:px-10 md:py-28 lg:px-16"
+ >
+{/* Background decoration */} <div className="pointer-events-none absolute -right-24 -top-24 h-80 w-80 rounded-full bg-[#FF4FA3]/25 blur-3xl" />
 
-      <div className="relative mx-auto max-w-7xl">
-        <div className="grid gap-12 lg:grid-cols-[1fr_0.8fr] lg:items-end">
-          <div>
-            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.28em] text-[#EBC1C8]">
-              Contact
-            </p>
+```
+  <div className="pointer-events-none absolute -bottom-32 -left-24 h-80 w-80 rounded-full bg-[#00E5FF]/[0.05] blur-3xl" />
 
-            <h2 className="max-w-3xl font-serif text-4xl leading-tight tracking-tight md:text-6xl">
-              Have an AI idea or automation problem to solve?
-            </h2>
+  <div className="relative mx-auto max-w-7xl">
+    <div className="grid gap-12 lg:grid-cols-[1fr_0.8fr] lg:items-end">
+      {/* Contact introduction */}
+      <div>
+        <p className="mb-4 text-xs font-semibold uppercase tracking-[0.28em] text-[#00E5FF]">
+          Contact
+        </p>
 
-            <p className="mt-6 max-w-2xl text-base leading-8 text-white/65 md:text-lg">
-              I&apos;m open to AI automation projects, Generative AI
-              applications, remote opportunities, and collaborations where I
-              can build practical systems from idea to implementation.
-            </p>
-          </div>
+        <h2 className="max-w-3xl font-serif text-4xl leading-tight tracking-tight text-[#F5F5F7] md:text-6xl">
+          Have an AI idea or workflow to automate?
+        </h2>
 
-          <div className="rounded-[2rem] border border-white/10 bg-white/[0.06] p-6 backdrop-blur-sm md:p-7">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#EBC1C8]">
-              Let&apos;s connect
-            </p>
+        <p className="mt-6 max-w-2xl text-base leading-8 text-[#9CA3AF] md:text-lg">
+          I build AI-powered applications and automated workflows that
+          help businesses reduce repetitive work, connect their tools,
+          and turn manual processes into practical systems.
+        </p>
 
-            <div className="mt-5 space-y-3">
+        <p className="mt-4 max-w-2xl text-sm leading-7 text-[#9CA3AF]">
+          I&apos;m open to AI automation projects, Generative AI
+          applications, remote opportunities, and collaborations.
+        </p>
+      </div>
 
-              {/* EMAIL */}
-              <a
-                href="https://mail.google.com/mail/?view=cm&fs=1&to=mahamhayat192@gmail.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-between rounded-2xl border border-white/10 bg-white/[0.04] px-5 py-4 text-sm text-white/80 transition hover:border-[#D98F9B]/60 hover:bg-white/[0.08]"
-              >
-                <span>Email</span>
-                <span className="text-white/45">↗</span>
-              </a>
+      {/* Contact links */}
+      <div className="rounded-[2rem] border border-[#1F2937] bg-[#0E0E12] p-6 shadow-[0_20px_70px_rgba(0,229,255,0.04)] md:p-8">
+        <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#FF4FA3]">
+          Let&apos;s build something useful.
+        </p>
 
-              {/* LINKEDIN */}
-              <a
-                href="https://www.linkedin.com/in/maham-shaukat-53132343a"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-between rounded-2xl border border-white/10 bg-white/[0.04] px-5 py-4 text-sm text-white/80 transition hover:border-[#D98F9B]/60 hover:bg-white/[0.08]"
-              >
-                <span>LinkedIn</span>
-                <span className="text-white/45">↗</span>
-              </a>
+        <p className="mt-3 text-sm leading-6 text-[#9CA3AF]">
+          Have a project, opportunity, or idea? Get in touch.
+        </p>
 
-              {/* GITHUB */}
-              <a
-                href="https://github.com/MahamHayatDev"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-between rounded-2xl border border-white/10 bg-white/[0.04] px-5 py-4 text-sm text-white/80 transition hover:border-[#D98F9B]/60 hover:bg-white/[0.08]"
-              >
-                <span>GitHub</span>
-                <span className="text-white/45">↗</span>
-              </a>
+        <div className="mt-6 space-y-3">
+          {/* Email */}
+          <a
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=mahamhayat192@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex items-center justify-between rounded-2xl border border-[#00E5FF]/35 bg-[#00E5FF]/[0.06] px-5 py-4 text-sm font-medium text-[#00E5FF] transition-all duration-200 hover:border-[#00E5FF] hover:bg-[#00E5FF]/[0.12]"
+          >
+            <span>Email</span>
+            <span
+              aria-hidden="true"
+              className="text-base transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+            >
+              â†—
+            </span>
+          </a>
 
-            </div>
-          </div>
-        </div>
+          {/* LinkedIn */}
+          <a
+            href="https://www.linkedin.com/in/maham-shaukat-53132343a"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex items-center justify-between rounded-2xl border border-[#1F2937] bg-[#09090B] px-5 py-4 text-sm font-medium text-[#E5E7EB] transition-all duration-200 hover:border-[#FF4FA3]/60 hover:bg-[#FF4FA3]/[0.08] hover:text-white"
+          >
+            <span>LinkedIn</span>
+            <span
+              aria-hidden="true"
+              className="text-base text-[#FF4FA3] transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+            >
+              â†—
+            </span>
+          </a>
 
-        <div className="mt-16 flex flex-col gap-4 border-t border-white/10 pt-7 text-xs text-white/40 sm:flex-row sm:items-center sm:justify-between">
-          <p>© 2026 Maham Shaukat. All rights reserved.</p>
-
-          <p>AI Automation · Generative AI · Intelligent Systems</p>
+          {/* GitHub */}
+          <a
+            href="https://github.com/MahamHayatDev"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex items-center justify-between rounded-2xl border border-[#1F2937] bg-[#09090B] px-5 py-4 text-sm font-medium text-[#E5E7EB] transition-all duration-200 hover:border-[#00E5FF]/50 hover:bg-[#00E5FF]/[0.05] hover:text-white"
+          >
+            <span>GitHub</span>
+            <span
+              aria-hidden="true"
+              className="text-base text-[#00E5FF] transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+            >
+              â†—
+            </span>
+          </a>
         </div>
       </div>
-    </section>
-  );
+    </div>
+
+    {/* Footer */}
+    <div className="mt-16 flex flex-col gap-4 border-t border-[#1F2937] pt-7 text-xs text-[#71717A] sm:flex-row sm:items-center sm:justify-between">
+      <p>
+        Â© {new Date().getFullYear()} Maham Shaukat. All rights reserved.
+      </p>
+
+      <p className="tracking-wide">
+        <span className="text-[#00E5FF]">AI Automation</span>
+        {" Â· "}
+        <span className="text-[#FF4FA3]">Generative AI</span>
+        {" Â· "}
+        Intelligent Systems
+      </p>
+    </div>
+  </div>
+</section>
+
+);
 }
+
