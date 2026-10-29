@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+public/videos/supportops-agent-demo.mp4
+public/videos/supportops-agent-demo-muted-original.mp4
+*.bak
